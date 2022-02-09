@@ -10,7 +10,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      background: ${theme.background};
+      background: ${theme.colors.background};
+      color: ${theme.colors.gray[900]};
       font-size: 16px;
     }
 
