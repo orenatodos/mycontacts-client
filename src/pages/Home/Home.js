@@ -2,10 +2,14 @@ import { ReactComponent as ArrowIcon } from '../../assets/images/icons/arrow.svg
 import { ReactComponent as EditIcon } from '../../assets/images/icons/edit.svg'
 import { ReactComponent as TrashIcon } from '../../assets/images/icons/trash.svg'
 
-import * as S from './ContactsList.styles'
+import * as S from './Home.styles'
 
-export const ContactsList = () => (
+export const Home = () => (
   <S.Wrapper>
+    <S.InputSearchContainer>
+      <input type="text" name="" id="" placeholder='Pesquisar contato...'/>
+    </S.InputSearchContainer>
+
     <S.Header>
       <strong>3 contatos</strong>
       <a href="/">Novo contato</a>
