@@ -1,10 +1,11 @@
+import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
 import { Button } from '../Button'
 
 import * as S from './Modal.styles'
 
-export const Modal = ({ danger }) => (
+export const Modal = ({ danger }) => ReactDOM.createPortal(
   <S.Overlay>
     <S.Wrapper danger>
       <h1>Titulo do Modal</h1>
@@ -14,7 +15,8 @@ export const Modal = ({ danger }) => (
         <Button type="button" danger>Deletar</Button>
       </S.Footer>
     </S.Wrapper>
-  </S.Overlay>
+  </S.Overlay>,
+  document.getElementById('modal-root')
 )
 
 Modal.propTypes = {
