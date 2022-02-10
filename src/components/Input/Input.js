@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const Input = styled.input`
-  ${({ theme }) => css`
+  ${({ theme, error }) => css`
     width: 100%;
     background: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
@@ -17,5 +17,10 @@ export const Input = styled.input`
     &:focus {
       border-color: ${theme.colors.primary.main};
     }
+
+    ${!!error && css`
+      color: ${theme.colors.danger.main};
+      border-color: ${theme.colors.danger.main} !important;
+    `}
   `}
 `
