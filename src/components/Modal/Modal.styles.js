@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
@@ -14,20 +14,23 @@ export const Overlay = styled.div`
 `
 
 export const Wrapper = styled.div`
-  width: 100%;
-  max-width: 450px;
-  background: #fff;
-  border-radius: 4px;
-  padding: 24px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  ${({ theme, danger }) => css`
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
 
-  h1 {
-    font-size: 22px;
-  }
+    h1 {
+      font-size: 22px;
+      color: ${danger ? theme.colors.danger.main : theme.colors.gray[900]};
+    }
 
-  p {
-    margin-top: 8px;
-  }
+    p {
+      margin-top: 8px;
+    }
+  `}
 `
 
 export const Footer = styled.footer`

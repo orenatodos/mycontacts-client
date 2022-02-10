@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const Button = styled.button`
-  ${({ theme }) => css`
+  ${({ theme, danger }) => css`
     padding: 0 16px;
     height: 52px;
     border: 0;
@@ -25,5 +25,17 @@ export const Button = styled.button`
       background: #ccc;
       cursor: default;
     }
+
+    ${danger && css`
+      background: ${theme.colors.danger.main};
+
+      &:hover {
+        background: ${theme.colors.danger.light};
+      }
+
+      &:active {
+        background: ${theme.colors.danger.dark};
+      }
+    `}
   `}
 `
