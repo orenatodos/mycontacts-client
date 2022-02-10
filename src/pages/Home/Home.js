@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { ReactComponent as ArrowIcon } from '../../assets/images/icons/arrow.svg'
 import { ReactComponent as EditIcon } from '../../assets/images/icons/edit.svg'
 import { ReactComponent as TrashIcon } from '../../assets/images/icons/trash.svg'
@@ -12,7 +14,7 @@ export const Home = () => (
 
     <S.Header>
       <strong>3 contatos</strong>
-      <a href="/">Novo contato</a>
+      <Link to="/new">Novo contato</Link>
     </S.Header>
 
     <S.ListWrapper>
@@ -34,49 +36,9 @@ export const Home = () => (
         </div>
 
         <div className="actions">
-          <a href="/">
+          <Link to="/edit/123">
             <EditIcon />
-          </a>
-          <button type="button">
-            <TrashIcon />
-          </button>
-        </div>
-      </S.Card>
-
-      <S.Card>
-        <div className="info">
-          <div className="contact-name">
-            <strong>Renato Silva</strong>
-            <small>Instagram</small>
-          </div>
-          <span>orenatodos@gmail.com</span>
-          <span>(11) 9999-9999</span>
-        </div>
-
-        <div className="actions">
-          <a href="/">
-            <EditIcon />
-          </a>
-          <button type="button">
-            <TrashIcon />
-          </button>
-        </div>
-      </S.Card>
-
-      <S.Card>
-        <div className="info">
-          <div className="contact-name">
-            <strong>Renato Silva</strong>
-            <small>Instagram</small>
-          </div>
-          <span>orenatodos@gmail.com</span>
-          <span>(11) 9999-9999</span>
-        </div>
-
-        <div className="actions">
-          <a href="/">
-            <EditIcon />
-          </a>
+          </Link>
           <button type="button">
             <TrashIcon />
           </button>
